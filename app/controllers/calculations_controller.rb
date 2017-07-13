@@ -8,6 +8,19 @@ class CalculationsController < ApplicationController
       render ("calculations/flex_square.html.erb") 
    end
    
+   def square_form
+       render ("calculations/square_form.html.erb") 
+   end
+   
+   def process_square
+       
+      @number = params["the_user_number"].to_i
+      @squared_number =  @number**2
+      
+       render ("calculations/square_results.html.erb") 
+   end
+   
+   
     def flex_root
       
       @number = params["root_number"].to_i
