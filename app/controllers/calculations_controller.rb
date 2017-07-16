@@ -2,7 +2,7 @@ class CalculationsController < ApplicationController
    
    def flex_square
       
-      @number = params["a_number"].to_i
+      @number = params["a_number"].to_f
       @squared_number =  @number**2
       
       render ("calculations/flex_square.html.erb") 
@@ -14,7 +14,7 @@ class CalculationsController < ApplicationController
    
    def process_square
        
-      @number = params["the_user_number"].to_i
+      @number = params["the_user_number"].to_f
       @squared_number =  @number**2
       
        render ("calculations/square_results.html.erb") 
@@ -23,7 +23,7 @@ class CalculationsController < ApplicationController
    
     def flex_root
       
-      @number = params["root_number"].to_i
+      @number = params["root_number"].to_f
       @squared_root =  Math.sqrt(@number)
       
       render ("calculations/flex_root.html.erb") 
@@ -35,7 +35,7 @@ class CalculationsController < ApplicationController
    
    def process_square_root
        
-      @number = params["the_user_number"].to_i
+      @number = params["the_user_number"].to_f
       @squared_number = Math.sqrt(@number)
       
        render ("calculations/square_root_results.html.erb") 
@@ -47,11 +47,12 @@ class CalculationsController < ApplicationController
       @years = params["years"].to_i
       @loan = params["loan"].to_i
       
-      total = @loan * (1+@apr/10000)**@years
+      #total = @loan * (1+@apr/10000)**@years
       r =  @apr/10000/12
       num = r * @loan 
       den = 1 - (1 + r)**(- @years*12) 
       @monthly_payment = num / den
+      # @monthly_payment= @monthly_payment.round(2)
     
     render ("calculations/flex_payment.html.erb") 
    end
