@@ -1,10 +1,10 @@
 
 <h1> Square Root Results</h1>
 
-<p> The APR is <%= number_to_percentage( @apr) %>  </p>
+<p> The APR is <%= number_to_percentage( @apr, precision:4) %>  </p>
 <p> The principal is <%=   number_to_currency(@loan) %> </p>
 <p> The years remaining are <%= @years %> </p>
 
-<p> The monthly payment is <%= @monthly_payment %> </p>
+<p> The monthly payment is <%= number_to_currency(@monthly_payment,precision:4) %> </p>
 
 <a href= "/payment/new">Return</a>
