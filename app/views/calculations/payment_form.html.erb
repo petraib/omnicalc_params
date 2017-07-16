@@ -85,19 +85,27 @@
             </tr>
           </table>
 
-          <h1>
-  Flexible Payment
-</h1>
+          
 
 
-<h1>Square Form</h1>
+<h1>Peyment Form</h1>
 
-<form action = "/square/results">
+<form action = "/payment/results">
     <div>
-        <label for="number_input"> Enter a Number</label>
-        <input id= "number_input" type = "text" name = "the_user_number">
+        <label for="principal"> Enter Principal Amount</label>
+        <input id= "principal" type = "text" name = "loan" placeholder="loan amount">
     </div>
     
-    <button> Calculate Square</button>
+    <div>
+        <label for="apr"> Enter APR</label>
+        <input id= "apr" type = "text" name = "apr" placeholder="E.g. 5.42">
+    </div>
+    
+     <div>
+        <label for="years"> Enter years</label>
+        <input id= "years" type = "text" name = "years" placeholder="how many years to repay?">
+    </div>
+    
+    <button> Calculate Monthly Payment</button>
     
 </form>

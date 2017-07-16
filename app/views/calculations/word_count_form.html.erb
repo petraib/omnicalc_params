@@ -85,19 +85,25 @@
             </tr>
           </table>
 
-          <h1>
-  Flexible Payment
-</h1>
+          
 
 
-<h1>Square Form</h1>
+<h1>Peyment Form</h1>
 
-<form action = "/square/results">
+<form action = "/word_count/results">
     <div>
-        <label for="number_input"> Enter a Number</label>
-        <input id= "number_input" type = "text" name = "the_user_number">
+    <label for="word_count_textarea">
+      Text
+    </label>
+
+    <textarea id="word_count_textarea" name="text" rows="3" placeholder="Enter some text"></textarea>
+  </div>
+    
+    <div>
+        <label for="special_word"> Special Word</label>
+        <input id= "special_word" type = "text" name = "special_word" placeholder="word to count">
     </div>
     
-    <button> Calculate Square</button>
+   <button> Count Words</button>
     
 </form>
